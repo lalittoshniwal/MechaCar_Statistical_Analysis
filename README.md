@@ -55,10 +55,17 @@ Summary of interpretation and findings for the t-test results
 
 
 ## Study Design: MechaCar vs Competition
-Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horsepower, maintenance cost, or safety rating.
+To quantify how the MechaCar performs against the competition, I recommend the following analysis:
+1. What metric or metrics are you going to test?
+ - I would like to test the time it takes for MechaCar to reach 60mph from 0mph compared with other cars in the same price range.
+ - I would also like to test the torque of the MechaCar motor compared with that of other car motors with the same numbers of cylinders and strokes.
 
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+2. What is the null hypothesis or alternative hypothesis?
+- The null hypothesis is that the means of all groups are equal. The alternate hypothesis is that at least the mean of one group is different from that of all the other groups.
+
+3. What statistical test would you use to test the hypothesis? And why?
+- Depending on the metric, I would use either the one-way ANOVA test or two-way ANOVA test i.e. to test 0-to-60, I will use one-way ANOVA, and to test torque, I will use two-way ANOVA. I chose ANOVA tests as they would allow me to test the means of a single dependent variable across one or two independent variables with multiple groups.
+
+4. What data is needed to run the statistical test?
+- To test 0-60 I need the following data: a dataframe with a column for 0-60 time in seconds (continuous dependent variable) and a column for price range (independent  - categorical variable) for various cards on the market
+- To test motor torque, I need the following data: a dataframe with a column for motor torque in pounds (continuous dependent variable) and columns for numbers of cylinders and numbers of strokes for various cards on the market.
